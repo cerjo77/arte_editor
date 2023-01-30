@@ -10,7 +10,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: blueviolet;
-    background-image:url("../images/teste.jpg");
+    background-image:url("images/teste.jpg");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,5 +19,5 @@ body{
 .div_photo{
     width: 40%;
     height: 300px;
-    background-color: brown;
+    /*background-color: brown;*/
 }
