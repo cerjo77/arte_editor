@@ -1,5 +1,5 @@
 function heightResize(){
-    const div = document.getElementById("arte");
+  const div = document.getElementById("arte");
     const rect = div.getBoundingClientRect();
     let divWidth = rect.width;
     let divHeight = rect.height;
@@ -7,6 +7,8 @@ function heightResize(){
     div.style.height = `${divWidth - (divWidth*0.55)}px`;
     document.getElementById("logText").innerText = `${divWidth - (divWidth*0.55)}`;
 }
+
+
 
 heightResize();
 window.addEventListener('resize', heightResize);
