@@ -27,6 +27,11 @@ draggable.addEventListener("mouseup", dragEnd);
 draggable.addEventListener("mouseout", dragEnd);
 draggable.addEventListener("mousemove", drag);
 
+draggable.addEventListener("touchstart", dragStart);
+draggable.addEventListener("touchend", dragEnd);
+draggable.addEventListener("touchcancel", dragEnd);
+draggable.addEventListener("touchmove", drag);
+
 function dragStart(e) {
   initialX = e.clientX - xOffset;
   initialY = e.clientY - yOffset;
@@ -57,3 +62,5 @@ function drag(e) {
 function setTranslate(xPos, yPos, el) {
   el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
 }
+
+

@@ -1,35 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Canvas Drawing</title>
-  <style>
-    #canvas {
-      border: 1px solid black;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Editor</title>
+    <link rel="stylesheet" href="assets/editor.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <canvas id="canvas" width="500" height="500"></canvas>
-  <script>
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    var isDrawing = false;
-
-    canvas.addEventListener("mousedown", function(e) {
-      isDrawing = true;
-      ctx.moveTo(e.clientX, e.clientY);
-    });
-
-    canvas.addEventListener("mousemove", function(e) {
-      if (isDrawing) {
-        ctx.lineTo(e.clientX, e.clientY);
-        ctx.stroke();
-      }
-    });
-
-    canvas.addEventListener("mouseup", function() {
-      isDrawing = false;
-    });
-  </script>
+    <h3 id="logText"></h3>
+    <div id="arte" class="div_arte" >
+        <div class="controls">
+            <span class="material-icons">edit</span>
+        </div>
+        <div id="photo" class="div_photo draggable">
+            <img src="" alt="">
+        </div>
+    </div>
 </body>
+<script src="assets/js/editor.js"></script>
 </html>
